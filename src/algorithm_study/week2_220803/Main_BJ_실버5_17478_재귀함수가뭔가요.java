@@ -2,7 +2,7 @@ package algorithm_study.week2_220803;
 
 import java.util.Scanner;
 
-public class Main_BJ_17478_재귀함수가뭔가요 {
+public class Main_BJ_실버5_17478_재귀함수가뭔가요 {
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) {

@@ -2,7 +2,7 @@ package algorithm_study.week1_220728;
 
 import java.util.Scanner;
 
-public class Main_BJ_10870_피보나치 {
+public class Main_BJ_브론즈2_10870_피보나치 {
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		System.out.println(fibonacci(sc.nextInt()));

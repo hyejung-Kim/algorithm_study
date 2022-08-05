@@ -2,7 +2,7 @@ package algorithm_study.week2_220803;
 
 import java.util.Scanner;
 
-public class Main_BJ_2231_분해합 {
+public class Main_BJ_브론즈2_2231_분해합 {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
