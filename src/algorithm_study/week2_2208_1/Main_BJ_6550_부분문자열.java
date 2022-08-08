@@ -1,4 +1,4 @@
-package algorithm_study.week2_220803;
+package algorithm_study.week2_2208_1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
