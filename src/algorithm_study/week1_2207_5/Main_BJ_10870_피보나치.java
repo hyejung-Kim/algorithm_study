@@ -1,4 +1,4 @@
-package algorithm_study.week1_220728;
+package algorithm_study.week1_2207_5;
 
 import java.util.Scanner;
 
