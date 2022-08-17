@@ -1,4 +1,4 @@
-package algorithm_study.week3;
+package algorithm_study.week3_2208_2;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

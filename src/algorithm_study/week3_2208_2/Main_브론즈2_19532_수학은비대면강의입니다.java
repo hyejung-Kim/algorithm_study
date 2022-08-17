@@ -2,7 +2,7 @@ package algorithm_study.week3_2208_2;
 
 import java.util.Scanner;
 
-public class Main_BJ_브론즈2_19532_수학은비대면강의입니다 {
+public class Main_브론즈2_19532_수학은비대면강의입니다 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();

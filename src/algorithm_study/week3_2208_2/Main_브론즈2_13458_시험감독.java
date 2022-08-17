@@ -1,4 +1,4 @@
-package algorithm_study.week3;
+package algorithm_study.week3_2208_2;
 import java.util.Scanner;
 
 public class Main_브론즈2_13458_시험감독 {

@@ -1,36 +1,58 @@
-package algorithm_study.week1_220728;
+package algorithm_study.week1_2207_5;
 
 import java.util.Scanner;
 
 public class Main_BJ_골드5_2447_별찍기10 {
-	
+
 	static StringBuilder sb = new StringBuilder();
 
 	public static void main(String[] args) throws Exception {
 
 		Scanner sc = new Scanner(System.in);
-		//N은 3의 거듭제곱
-		//int N = sc.nextInt();
-		
-		printStar1(1,1,"*",27,0);
+		// N은 3의 거듭제곱
+		N = sc.nextInt();
+		isPrinted = new boolean[N + 1][N + 1];
+
+		printStar(1, 1);
 		System.out.println(sb);
 	}
-	
-	static void printStar1(int r, int c, String star, int num, int cnt) {
-		int n = num;
-		if(c>num) {
-			r++;
-			c=1;
-			if(num==cnt) {
-				sb.append("\n");
-				cnt=0;
+
+	static int N;
+	static boolean[][] isPrinted;
+
+	static void printStar(int r, int c) {
+		if (r == N + 1 && c == 1)
+			return;
+
+		// r과 c가 모두 3의i승~3의i+1승 이내라면 공백 출력
+		boolean isBlank = false;
+		// N의 세제곱근
+		int pow = (int) Math.cbrt(N);
+		for (int i = 0; i < pow; i++) {
+			if (Math.pow(3, i) < r && r < Math.pow(3, i + 1)) {
+				for (int j = 0; j < pow; j++) {
+					if (!isPrinted[r][c] && Math.pow(3, j) < c && c < Math.pow(3, j + 1)) {
+						System.out.print(" ");
+						isPrinted[r][c] = true;
+						isBlank = true;
+					}
+				}
 			}
 		}
-		if(r>num)	return;
 
-		if(r>num/3 && r<=num-num/3 && c>num/3 && c<=num-num/3) sb.append(" ");
-		else if(r%3==2 && c%3==2) sb.append(" ");
-		else sb.append(star);
-		printStar1(r,c+1,star,num,cnt+1);
+		// 공백이 아니면 별찍기
+		if (isBlank == false) {
+			System.out.print("*");
+			isPrinted[r][c] = true;
+		}
+
+		// N개 찍을 때마다 줄바꿈
+		if (c == N) {
+			System.out.println();
+			c = 0;
+			r++;
+		}
+
+		printStar(r,c+1);
 	}
 }
