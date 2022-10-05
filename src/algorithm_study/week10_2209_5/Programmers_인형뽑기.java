@@ -3,7 +3,7 @@ package algorithm_study.week10_2209_5;
 import java.util.Arrays;
 import java.util.Stack;
 
-public class Main {
+public class Programmers_인형뽑기 {
 
 	public static void main(String[] args) {
 		

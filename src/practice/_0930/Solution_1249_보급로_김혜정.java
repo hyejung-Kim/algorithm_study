@@ -1,4 +1,4 @@
-package _0930;
+package practice._0930;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
