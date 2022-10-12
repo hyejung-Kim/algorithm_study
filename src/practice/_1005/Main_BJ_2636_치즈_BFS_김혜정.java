@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_BJ_2636_치즈_김혜정2 {
+public class Main_BJ_2636_치즈_BFS_김혜정 {
 	
 	static int R,C,cheese;
 	static int[][] map;
@@ -14,8 +14,9 @@ public class Main_BJ_2636_치즈_김혜정2 {
 	static int[][] delta = {{-1,0},{1,0},{0,-1},{0,1}};
 	static Queue<int[]> q = new LinkedList<>();
 	static Queue<int[]> melt = new LinkedList<>();
+	static int startR, startC;
 	
-	static void melt() {
+	static void melt(int r, int c) {
 		while(!q.isEmpty()) {
 			int[] p = q.poll();
 			for(int[] d: delta) {
@@ -37,7 +38,8 @@ public class Main_BJ_2636_치즈_김혜정2 {
 				map[m[0]][m[1]]=0;
 				cheese--;
 			}
-			q.add(m);
+			startR=m[0];
+			startC=m[1];
 		}
 	}	
 	
@@ -63,10 +65,9 @@ public class Main_BJ_2636_치즈_김혜정2 {
 
 		int cnt=0;
 		int before1hour=0;
-		q.add(new int[] {0,0});
 		while(cheese>0) {
 			before1hour = cheese;
-			melt();
+			melt(startR, startC);
 			cnt++;
 		}
 		
